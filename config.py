@@ -1,8 +1,8 @@
 # [step 1]>> 例如： API_KEY = "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" （此key无效）
-API_KEY = "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"
+API_KEY = "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"
 
 # [step 2]>> 改为True应用代理，如果直接在海外服务器部署，此处不修改
-USE_PROXY = False
+USE_PROXY = True
 if USE_PROXY:
     # 填写格式是 [协议]://  [地址] :[端口]，填写之前不要忘记把USE_PROXY改成True，如果直接在海外服务器部署，此处不修改
     # 例如    "socks5h://localhost:11284"
@@ -11,10 +11,9 @@ if USE_PROXY:
     # [端口] 在代理软件的设置里找。虽然不同的代理软件界面不一样，但端口号都应该在最显眼的位置上
 
     # 代理网络的地址，打开你的科学上网软件查看代理的协议(socks5/http)、地址(localhost)和端口(11284)
-    proxies = { 
+    proxies = {"http://localhost:7890"
         #          [协议]://  [地址]  :[端口]
-        "http":  "socks5h://localhost:11284", 
-        "https": "socks5h://localhost:11284", 
+       
     }
 else:
     proxies = None
@@ -43,4 +42,4 @@ API_URL = "https://api.openai.com/v1/chat/completions"
 CONCURRENT_COUNT = 100
 
 # 设置用户名和密码
-AUTHENTICATION = [] # [("username", "password"), ("username2", "password2"), ...]
+AUTHENTICATION = ["PeIAXM","644541@AZ"] # [("username", "password"), ("username2", "password2"), ...]
